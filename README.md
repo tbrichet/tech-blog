@@ -34,13 +34,14 @@ To create a CMS-style blog site so that a developer (user) can publish articles,
 * JavaScript <br>
 * SQL <br>
 
-## Third Party Programs
+## Third Party Programs and Support
 * Node.js <br>
 * Express + Express-Handlebars + Express-Session <br>
 * MySQL2 <br>
 * Sequelize <br>
 * DOTENV <br>
 * Bcrypt <br>
+* Substantial Starter Code provided by U of A Coding Bootcamp <br>
 
 ## Links
 Github Repository | https://github.com/tbrichet/tech-blog<br>
