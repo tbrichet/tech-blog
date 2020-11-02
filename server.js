@@ -30,7 +30,7 @@ app.use(session(expressSession));
 const hbHelpers = exphbs.create({
     helpers: {
         format_date: date => {
-            return `${date.getMonth() + 1}/${date.getDate()}/$${date.getFullYear()}`;
+            return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
         }
     }
 });
