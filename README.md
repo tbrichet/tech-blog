@@ -45,3 +45,4 @@ To create a CMS-style blog site so that a developer (user) can publish articles,
 
 ## Links
 Github Repository | https://github.com/tbrichet/tech-blog<br>
+Deployed Site (Heroku) | https://mysterious-sands-34195.herokuapp.com/

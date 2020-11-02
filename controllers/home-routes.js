@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Post, Comment, User } = require("../models/");
 
-// get all posts for homepage
+// GET ALL POSTS
 router.get("/", (req, res) => {
   Post.findAll({
     include: [User],
@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
     });
 });
 
-// get single post
+// GET SPECIFIC POST BY ID
 router.get("/post/:id", (req, res) => {
   Post.findByPk(req.params.id, {
     include: [
@@ -41,6 +41,7 @@ router.get("/post/:id", (req, res) => {
     });
 });
 
+// LOGIN
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
@@ -50,6 +51,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// SIGNUP
 router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");

@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Post } = require("../models/");
 const withAuth = require("../utils/auth");
 
+// GET ALL POSTS
 router.get("/", withAuth, (req, res) => {
     Post.findAll({
       where: {
@@ -22,13 +23,15 @@ router.get("/", withAuth, (req, res) => {
       });
   });
 
-  router.get("/new", withAuth, (req, res) => {
+// GET NEWEST POST
+router.get("/new", withAuth, (req, res) => {
     res.render("new-post", {
       layout: "dashboard"
     });
-  });
-  
-  router.get("/edit/:id", withAuth, (req, res) => {
+});
+
+// GET SPECIFIC POST, ALLOW USER EDITING
+router.get("/edit/:id", withAuth, (req, res) => {
     Post.findByPk(req.params.id)
       .then(dbPostData => {
         if (dbPostData) {
